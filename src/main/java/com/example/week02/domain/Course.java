@@ -30,6 +30,14 @@ public class Course extends Timestamped {
         this.title = requestDto.getTitle();
         this.tutor = requestDto.getTutor();
     }
+
+//    Dto를 그릇으로 사용하는 생성자 추가
+//    (Database에 정보를 저장하는 녀석은 Course가 될테니 Dto 그릇에 담긴 데이터를 쉽게 추가해줄 수 있도록 생성자를 만든다)
+    public Course(CourseRequestDto requestDto) {
+        this.title = requestDto.getTitle();
+        this.tutor = requestDto.getTutor();
+    }
+    
 }
 
 //@NoArgsConstructor // 기본생성자를 대신 생성해줍니다.
